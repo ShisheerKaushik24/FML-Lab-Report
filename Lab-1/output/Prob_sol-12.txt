@@ -1,0 +1,5 @@
+For negative number:
+Sorry mate! the entered number -5 is non-positive number
+
+For positive number:
+The factorial of 5 is 120

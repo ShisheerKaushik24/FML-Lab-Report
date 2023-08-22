@@ -1,0 +1,4 @@
+   Country  Average Population
+0  Germany        6.706667e+07
+1   Poland        2.885333e+07
+2   Russia        5.300167e+07

@@ -1,0 +1,4 @@
+     person  gender  age
+0    Olivia  female   31
+2    Casper  female   45
+8  Isabella  female   50

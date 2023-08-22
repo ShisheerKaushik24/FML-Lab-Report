@@ -1,0 +1,16 @@
+Provided list of numbers were:  [6, 7, 11, 18]
+The summation of all even numbers in the provided list is:  24
+
+
+
+
+
+
+
+
+
+
+
+
+
+

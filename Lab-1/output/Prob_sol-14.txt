@@ -1,0 +1,9 @@
+Given data:
+The given value of length is: 5
+The given value of Width is: 5
+The given value of Height is: 10
+
+Output data:
+The Area of Rectangle is: 25
+The Perimeter of Rectangle is: 20
+The Volume of Rectangle is: 250

@@ -1,0 +1,9 @@
+The Identity matrix of 3x3 is : 
+
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+
+The 1D array of Tdentity Matrix of 3x3 is : 
+
+[1. 0. 0. 0. 1. 0. 0. 0. 1.]
