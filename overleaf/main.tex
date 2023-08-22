@@ -1,0 +1,152 @@
+\documentclass[12pt,a4paper,openany]{book} % Add the 'openany' option
+
+\usepackage{pgf}
+% \usepackage[condensed,math]{kurier}
+% \usepackage[T1]{fontenc}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{stanli}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{pgfpages}
+\usepackage{svg}
+\usepackage{rotating}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{caption} % for customizing captions
+\usepackage{graphicx} % for including images
+\usepackage{placeins}
+
+\usepackage{fancyhdr}
+\fancyhf{} % Clear all headers and footers
+\renewcommand{\headrulewidth}{0pt} % Remove header rule line
+\pagestyle{fancy}
+
+\lstdefinestyle{mystyle}{
+  frame=none, % No frame
+  numbers=none, % No line numbers
+  breaklines=true,
+  basicstyle=\ttfamily\small,
+  language=Python,
+  commentstyle=\color{red}, % Color for comments
+  keywordstyle=\color{blue}, % Color for keywords
+  numberstyle=\tiny\color{mygray}, % Color for line numbers
+  stringstyle=\color{mauve} % Color for strings
+}
+
+\lstset{
+   language=Python,
+   basicstyle=\ttfamily\small,
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   frame=single,
+   tabsize=4,
+   breaklines=true,
+   postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\pgfpagesdeclarelayout{boxed}
+{
+	\edef\pgfpageoptionborder{0pt}
+}
+{
+	\pgfpagesphysicalpageoptions
+	{%
+		logical pages=1,%
+	}
+	\pgfpageslogicalpageoptions{1}
+	{
+		border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+		border shrink=\pgfpageoptionborder,%
+		resized width=.9\pgfphysicalwidth,%
+		resized height=.9\pgfphysicalheight,%
+		center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+	}%
+}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+
+\pgfpagesuselayout{boxed}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=1.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\newcommand{\subf}[2]{%
+		{\small\begin{tabular}[t]{@{}c@{}}
+				#1\\#2
+		\end{tabular}}%
+	}
+	
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{3cm}
+			
+			\Huge
+			\textbf{CSL7670 : Fundamentals of \\Machine Learning}
+			
+			\vspace{0.3cm}
+			\Huge
+			Lab Report
+			
+			\vspace{0.8cm}
+			\large
+			
+			INSTRUCTED BY: MR. Anand Mishra
+			
+			
+			\vspace{0.5cm}
+			\LARGE
+			
+			
+			\vspace{1.5cm}
+			
+			\textbf{}
+            \includegraphics[width=0.4\textwidth]{IITJ Logo__Small.jpeg}
+			
+			\vfill
+			
+			
+			
+			\vspace{0.8cm}
+			
+			
+			
+			\Large
+			
+			
+			
+			
+		\end{center}
+		\Large
+		\begin{tabbing}
+			\hspace*{1em}\= \hspace*{8em} \= \kill % set the tabbings
+			\> Name:\>  \textbf{SHISHEER S KAUSHIK} \\
+                \> Roll Number:\>  \textbf{M23IQT006} \\
+                 \> Program:\>  \textbf{M.Tech in Quantum Technologies} \\
+					\end{tabbing}
+	\end{titlepage}
+ 
+\include{Lab-1/main.tex}	
+\include{Lab-2/main.tex}	
+\end{document}
