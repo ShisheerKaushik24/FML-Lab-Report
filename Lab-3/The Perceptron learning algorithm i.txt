@@ -1,0 +1,45 @@
+The Perceptron learning algorithm is an iterative algorithm used for training binary classifiers, and it converges if the training data is linearly separable. In other words, if there exists a hyperplane that can separate the two classes of data points perfectly. Given the initial weight vector w=[1, 1], we can start applying the Perceptron learning algorithm to update the weights until convergence.
+
+The Perceptron learning algorithm update rule is as follows:
+
+w(t+1) = w(t) + η * (y - ŷ) * x
+
+Where:
+- w(t+1) is the updated weight vector at time t+1.
+- w(t) is the current weight vector at time t.
+- η (eta) is the learning rate.
+- y is the true class label (+1 or -1).
+- ŷ is the predicted class label (+1 or -1).
+- x is the input feature vector.
+
+Let's go through the steps of the Perceptron learning algorithm for the given data:
+
+Initial weight vector: w = [1, 1]
+
+Learning rate: η = 1 (for simplicity)
+
+Data:
+
+1. (x1=1, x2=1, Class=+1)
+   Predicted class: ŷ = sign(w*x) = sign(1*1 + 1*1) = +1 (correct classification)
+
+2. (x1=-1, x2=-1, Class=-1)
+   Predicted class: ŷ = sign(1*(-1) + 1*(-1)) = -1 (correct classification)
+
+3. (x1=0, x2=0.5, Class=-1)
+   Predicted class: ŷ = sign(1*0 + 1*0.5) = +1 (misclassified, update required)
+   Update w: w = [1, 1] + 1 * (-1 - 1) * [0, 0.5] = [1, 1] - [0, 0.5] = [1, 0.5]
+
+4. (x1=0.1, x2=0.5, Class=-1)
+   Predicted class: ŷ = sign(1*0.1 + 0.5*1) = +1 (misclassified, update required)
+   Update w: w = [1, 0.5] + 1 * (-1 - 1) * [0.1, 0.5] = [1, 0.5] - [0.2, 1] = [0.8, -0.5]
+
+5. (x1=0.2, x2=0.2, Class=+1)
+   Predicted class: ŷ = sign(0.8*0.2 - 0.5*0.2) = +1 (correct classification)
+
+6. (x1=0.9, x2=0.5, Class=+1)
+   Predicted class: ŷ = sign(0.8*0.9 - 0.5*0.5) = +1 (correct classification)
+
+At this point, all data points have been correctly classified, and there have been no weight updates in the last two iterations. Therefore, the Perceptron learning algorithm has converged.
+
+The Perceptron learning algorithm converged in 4 steps.
